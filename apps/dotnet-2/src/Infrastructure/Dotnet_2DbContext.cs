@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Dotnet_2.Infrastructure;
 
-public class Dotnet_2DbContext : IdentityDbContext<User>
+public class Dotnet_2DbContext : DbContext
 {
     public Dotnet_2DbContext(DbContextOptions<Dotnet_2DbContext> options)
         : base(options) { }
