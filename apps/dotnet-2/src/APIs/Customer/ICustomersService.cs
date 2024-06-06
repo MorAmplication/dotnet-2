@@ -8,7 +8,7 @@ public interface ICustomersService
     /// Create one Customer
     /// </summary>
     public Task<CustomerDto> CreateCustomer(CustomerCreateInput customerDto);
-    public Task<string> CustomGet(string data);
+    public Task<string> CustomCreate(string data);
 
     /// <summary>
     /// Delete one Customer
