@@ -55,6 +55,11 @@ public abstract class CustomersServiceBase : ICustomersService
         throw new NotImplementedException();
     }
 
+    public async Task<Customer> CustomGet(CustomerFindUniqueArgs customerFindUniqueArgs)
+    {
+        throw new NotImplementedException();
+    }
+
     /// <summary>
     /// Delete one Customer
     /// </summary>

@@ -27,46 +27,32 @@ public abstract class CustomersControllerBase : ControllerBase
         return CreatedAtAction(nameof(Customer), new { id = customer.Id }, customer);
     }
 
-    [HttpPost()]
-    public async Task CreateCustomer()
-    {
-        return await _service.CreateCustomer();
-    }
-
     [HttpGet()]
-    public async Task<string> CustomCreate([HttpBody()] string data)
+    public async Task<string> CustomCreate([FromBody()] string data)
     {
         return await _service.CustomCreate(data);
     }
 
     [HttpGet()]
-    public async Task CustomersMeta()
+    public async Task<Customer> CustomGet(
+        [FromQuery()] CustomerFindUniqueArgs customerFindUniqueArgs
+    )
     {
-        return await _service.CustomersMeta();
-    }
-
-    [HttpDelete()]
-    public async Task DeleteCustomer()
-    {
-        return await _service.DeleteCustomer();
+        return await _service.CustomGet(customerFindUniqueArgs);
     }
 
     [HttpGet()]
-    public async Task Customers()
+    public async Task<string> CustomCreate([FromBody()] string data)
     {
-        return await _service.Customers();
+        return await _service.CustomCreate(data);
     }
 
     [HttpGet()]
-    public async Task Customer()
+    public async Task<Customer> CustomGet(
+        [FromQuery()] CustomerFindUniqueArgs customerFindUniqueArgs
+    )
     {
-        return await _service.Customer();
-    }
-
-    [HttpPatch()]
-    public async Task UpdateCustomer()
-    {
-        return await _service.UpdateCustomer();
+        return await _service.CustomGet(customerFindUniqueArgs);
     }
 
     /// <summary>
