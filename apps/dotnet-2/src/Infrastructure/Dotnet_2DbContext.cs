@@ -9,4 +9,6 @@ public class Dotnet_2DbContext : DbContext
         : base(options) { }
 
     public DbSet<User> Users { get; set; }
+
+    public DbSet<Customer> Customers { get; set; }
 }
