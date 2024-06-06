@@ -34,15 +34,15 @@ public abstract class CustomersControllerBase : ControllerBase
     }
 
     [HttpGet()]
-    public async Task CustomersMeta()
+    public async Task<string> CustomCreate([HttpBody()] string data)
     {
-        return await _service.CustomersMeta();
+        return await _service.CustomCreate(data);
     }
 
     [HttpGet()]
-    public async Task<string> CustomGet([HttpQuery()] string data)
+    public async Task CustomersMeta()
     {
-        return await _service.CustomGet(data);
+        return await _service.CustomersMeta();
     }
 
     [HttpDelete()]
