@@ -28,31 +28,27 @@ public abstract class CustomersControllerBase : ControllerBase
     }
 
     [HttpGet()]
-    public async Task<string> CustomCreate([FromBody()] string data)
+    public async Task<CustomCustomer> CustomCreate([FromBody()] string data)
     {
         return await _service.CustomCreate(data);
     }
 
     [HttpGet()]
-    public async Task<Customer> CustomGet(
-        [FromQuery()] CustomerFindUniqueArgs customerFindUniqueArgs
-    )
+    public async Task<CustomCustomer> CustomGet([FromQuery()] string data)
     {
-        return await _service.CustomGet(customerFindUniqueArgs);
+        return await _service.CustomGet(data);
     }
 
     [HttpGet()]
-    public async Task<string> CustomCreate([FromBody()] string data)
+    public async Task<CustomCustomer> CustomCreate([FromBody()] string data)
     {
         return await _service.CustomCreate(data);
     }
 
     [HttpGet()]
-    public async Task<Customer> CustomGet(
-        [FromQuery()] CustomerFindUniqueArgs customerFindUniqueArgs
-    )
+    public async Task<CustomCustomer> CustomGet([FromQuery()] string data)
     {
-        return await _service.CustomGet(customerFindUniqueArgs);
+        return await _service.CustomGet(data);
     }
 
     /// <summary>

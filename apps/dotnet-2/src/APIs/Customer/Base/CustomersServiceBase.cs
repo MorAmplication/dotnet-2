@@ -50,12 +50,12 @@ public abstract class CustomersServiceBase : ICustomersService
         return result.ToDto();
     }
 
-    public async Task<string> CustomCreate(string data)
+    public async Task<CustomCustomer> CustomCreate(string data)
     {
         throw new NotImplementedException();
     }
 
-    public async Task<Customer> CustomGet(CustomerFindUniqueArgs customerFindUniqueArgs)
+    public async Task<CustomCustomer> CustomGet(string data)
     {
         throw new NotImplementedException();
     }

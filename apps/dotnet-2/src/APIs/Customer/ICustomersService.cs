@@ -8,8 +8,8 @@ public interface ICustomersService
     /// Create one Customer
     /// </summary>
     public Task<CustomerDto> CreateCustomer(CustomerCreateInput customerDto);
-    public Task<string> CustomCreate(string data);
-    public Task<Customer> CustomGet(CustomerFindUniqueArgs customerFindUniqueArgs);
+    public Task<CustomCustomer> CustomCreate(string data);
+    public Task<CustomCustomer> CustomGet(string data);
 
     /// <summary>
     /// Delete one Customer
